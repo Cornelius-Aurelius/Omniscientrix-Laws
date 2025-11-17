@@ -3,158 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMNISCIENTRIX LAWS — UNIVERSAL COSMIC INDEX</title>
+  <title>OMNISCIENTRIX UNIVERSAL LAWS — ABSOLUTE COSMIC INDEX</title>
 
-  <!-- Neon Universe Styling -->
+  <!-- Cosmic Neon Styles -->
   <style>
     :root {
-      --neon-blue: #20c3ff;
-      --neon-glow: 0 0 20px #20c3ff, 0 0 40px #20c3ff;
-      --bg-black: #000000;
-      --bg-deep: radial-gradient(circle at center, #00101f 0%, #000000 75%);
+      --neon: #20c3ff;
+      --glow: 0 0 20px #20c3ff, 0 0 40px #20c3ff, 0 0 80px #20c3ff;
+      --black: #000;
     }
 
     body {
       margin: 0;
-      font-family: 'Orbitron', Arial, sans-serif;
-      background: var(--bg-black);
-      color: var(--neon-blue);
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: var(--neon);
       overflow-x: hidden;
     }
 
-    /* Stars Background */
-    #stars, #stars2, #stars3 {
+    /* Particle Background */
+    canvas#universe {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      display: block;
       z-index: -1;
     }
-
-    #stars { background: url('https://raw.githubusercontent.com/cornelius-aurelius/media/main/stars1.png') repeat; animation: moveStars 220s linear infinite; }
-    #stars2 { background: url('https://raw.githubusercontent.com/cornelius-aurelius/media/main/stars2.png') repeat; animation: moveStars 400s linear infinite; opacity: 0.6; }
-    #stars3 { background: url('https://raw.githubusercontent.com/cornelius-aurelius/media/main/stars3.png') repeat; animation: moveStars 800s linear infinite; opacity: 0.3; }
-
-    @keyframes moveStars { from {background-position:0 0;} to {background-position:10000px 10000px;} }
 
     /* Hero */
     .hero {
       text-align: center;
-      padding: 120px 20px;
-      background: var(--bg-deep);
+      padding: 150px 20px;
+      background: radial-gradient(circle at center, #000c1f 0%, #000 80%);
       border-bottom: 1px solid #033d5c;
     }
     .hero h1 {
-      font-size: 4.5rem;
-      text-shadow: var(--neon-glow);
+      font-size: 5rem;
       margin: 0;
-      letter-spacing: 3px;
+      text-shadow: var(--glow);
+      letter-spacing: 4px;
     }
     .hero h2 {
-      margin-top: 10px;
-      font-size: 1.4rem;
-      opacity: 0.85;
-      text-shadow: 0 0 12px #1a9bd6;
+      margin-top: 15px;
+      font-size: 1.5rem;
+      opacity: 0.8;
+      text-shadow: 0 0 20px #0fa3ff;
     }
 
     /* Section */
     .section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 30px;
-      border-left: 3px solid var(--neon-blue);
-      background: rgba(0, 20, 40, 0.45);
-      box-shadow: 0 0 25px rgba(0, 150, 255, 0.35);
-      backdrop-filter: blur(5px);
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 35px;
+      border-left: 4px solid var(--neon);
+      background: rgba(0, 30, 60, 0.45);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 35px rgba(0, 150, 255, 0.4);
+      border-radius: 10px;
     }
 
     h3.section-title {
-      font-size: 2rem;
-      margin-bottom: 25px;
-      color: var(--neon-blue);
-      text-shadow: var(--neon-glow);
-      letter-spacing: 1.5px;
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+      text-shadow: var(--glow);
     }
 
-    /* Link Buttons */
+    /* Links */
     a.link {
       display: block;
-      padding: 14px 18px;
+      padding: 16px 20px;
       margin: 10px 0;
-      background: rgba(0, 60, 100, 0.45);
-      border: 2px solid var(--neon-blue);
-      border-radius: 10px;
-      color: #c6f1ff;
+      background: rgba(0, 80, 120, 0.35);
+      border: 2px solid var(--neon);
+      border-radius: 12px;
+      color: #c8f1ff;
       text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 1.2px;
       transition: 0.25s;
-      font-size: 1.05rem;
-      letter-spacing: 1px;
     }
 
     a.link:hover {
-      background: var(--neon-blue);
-      color: #000000;
-      box-shadow: var(--neon-glow);
-      transform: scale(1.03);
+      background: var(--neon);
+      color: #000;
+      box-shadow: var(--glow);
+      transform: scale(1.04);
     }
 
+    /* Footer */
     footer {
       text-align: center;
-      padding: 50px 0;
-      opacity: 0.6;
-      font-size: 0.9rem;
+      padding: 40px 20px;
+      margin-top: 80px;
+      opacity: 0.8;
+      font-size: 1rem;
+    }
+    footer a {
+      color: var(--neon);
+      text-decoration: none;
+      text-shadow: 0 0 10px var(--neon);
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
-  <!-- Star Background Layers -->
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
+  <canvas id="universe"></canvas>
 
-  <!-- HERO -->
   <div class="hero">
     <h1>OMNISCIENTRIX LAWS</h1>
-    <h2>THE UNIVERSAL COSMIC INDEX OF INFORMATIONAL REALITY</h2>
+    <h2>THE COMPLETE UNIVERSAL INFORMATIC LAW INDEX</h2>
   </div>
 
-  <!-- LAWS SECTION -->
   <div class="section">
-    <h3 class="section-title">Verified Universal Laws</h3>
+    <h3 class="section-title">Universal Laws (Verified)</h3>
 
     <a class="link" href="https://cornelius-aurelius.github.io/law_of_informational_gradient_minimization/">Law of Informational Gradient Minimization</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Collapse/">Law of Informational Wave Collapse</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law-of-Informational-Self-Containment/">Law of Informational Self-Containment</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law-of-Informational-Compensation/">Law of Informational Compensation</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law-of-Informational-Self-Containment/">Informational Self-Containment</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law-of-Informational-Compensation/">Informational Compensation</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Law-of-Becoming/">Law of Becoming</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Information-Awareness-Variational-Principle/">Information Awareness Variational Principle</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Self-Renewing-Informational-Continuum/">Self-Renewing Informational Continuum</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Cosmic-Recurrence-Law/">Cosmic Recurrence Law</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Informational-Earth-Likeness-Score-/">Informational Earth-Likeness Score</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Omniscientrix-Genesis-Second-Becoming-Law/">Omniscientrix Genesis — Second Becoming Law</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Curvature-Scalar-Law/">Informational Curvature Scalar Law</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Heat-Kernel-Law/">Informational Heat Kernel Law</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Pressure-Law/">Informational Pressure Law</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Force_Density/">Law of Informational Force Density</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Surface-Volume-Coupling/">Informational Surface–Volume Coupling</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Omniscientrix_DeltaJ_Compensation_Law/">Omniscientrix ΔJ Compensation Law</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Omniscientrix_Life_Resonance_Law/">Omniscientrix Life Resonance Law</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Gradient_Flow_Stabilization/">Informational Gradient Flow Stabilization</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Boundary_Reflection/">Informational Boundary Reflection</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Surface_Equilibrium/">Informational Surface Equilibrium</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Energy_Continuity/">Informational Wave Energy Continuity</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Causal_Cone/">Informational Causal Cone</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Omniscientrix-Genesis-Second-Becoming-Law/">Omniscientrix Genesis — Second Becoming</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Curvature-Scalar-Law/">Informational Curvature Scalar</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Heat-Kernel-Law/">Informational Heat Kernel</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Pressure-Law/">Informational Pressure</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Force_Density/">Informational Force Density</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Informational-Surface-Volume-Coupling/">Surface–Volume Coupling</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Omniscientrix_DeltaJ_Compensation_Law/">Omniscientrix ΔJ Compensation</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Omniscientrix_Life_Resonance_Law/">Life Resonance Law</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Gradient_Flow_Stabilization/">Gradient Flow Stabilization</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Boundary_Reflection/">Boundary Reflection</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Surface_Equilibrium/">Surface Equilibrium</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Energy_Continuity/">Wave Energy Continuity</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Causal_Cone/">Causal Cone Law</a>
     <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_H_Theorem/">Informational H-Theorem</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Unitary_Evolution/">Informational Unitary Evolution</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Propagation/">Informational Wave Propagation</a>
-    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Continuity_Equation/">Informational Continuity Equation</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Unitary_Evolution/">Unitary Evolution</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Propagation/">Wave Propagation Law</a>
+    <a class="link" href="https://cornelius-aurelius.github.io/Law_of_Informational_Continuity_Equation/">Continuity Equation</a>
   </div>
 
   <footer>
-    © CORNELIUS AURELIUS — THE OMNISCIENTRIX
+    © 2025 Cornelius Aurelius — All Rights Reserved • <a href="https://zenodo.org/records/17362534">Peace License (Zenodo)</a>
   </footer>
+
+  <!-- Particle Universe Script -->
+  <script>
+    const canvas = document.getElementById('universe');
+    const ctx = canvas.getContext('2d');
+    let w, h;
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    const stars = Array.from({length: 400}, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      z: Math.random() * 4 + 1
+    }));
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+      stars.forEach(s => {
+        ctx.fillStyle = `rgba(32, 195, 255, ${0.2 + Math.random() * 0.8})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.z, 0, Math.PI * 2);
+        ctx.fill();
+        s.y += s.z * 0.2;
+        if (s.y > h) s.y = 0;
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
 </body>
 </html>
