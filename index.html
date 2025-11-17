@@ -34,6 +34,38 @@
 
   footer{text-align:center;padding:40px;font-size:1rem;opacity:.8;} 
   footer a{color:var(--neon);font-weight:bold;text-decoration:none;} 
+  /* RESPONSIVE UPGRADES */
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 3.2rem; }
+    .hero h2 { font-size: 1.05rem; }
+    .section { padding: 28px; margin: 40px 10px; }
+  }
+
+  @media (max-width: 600px) {
+    body { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+
+    .hero { padding: 120px 15px 90px 15px; }
+    .hero h1 { font-size: clamp(2.2rem, 10vw, 3rem); letter-spacing: 2px; }
+    .hero h2 { font-size: clamp(0.8rem, 3.5vw, 1rem); }
+
+    .section { padding: 22px; border-left: 3px solid var(--neon); }
+
+    .section h3 { font-size: clamp(1.4rem, 6vw, 2rem); }
+
+    .law-list a {
+      padding: 14px 14px;
+      margin: 8px 0;
+      font-size: 0.9rem;
+      border-width: 1.5px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero h1 { font-size: 2rem; }
+    .hero h2 { font-size: 0.75rem; }
+    .law-list a { font-size: 0.85rem; padding: 12px; }
+  }
+
 </style>
 </head>
 
