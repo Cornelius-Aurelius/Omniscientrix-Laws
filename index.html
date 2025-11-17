@@ -7,9 +7,8 @@
 
 <style>
   :root {
-    --neon:#1fd0ff;
-    --glow:0 0 10px #1fd0ff,0 0 20px #1fd0ff,0 0 40px #1fd0ff;
-    --black:#000;
+    --neon:#19d6ff;
+    --glow:0 0 15px #19d6ff,0 0 35px #19d6ff,0 0 65px #19d6ff;
   }
   body{
     margin:0;
@@ -18,187 +17,104 @@
     color:var(--neon);
     overflow-x:hidden;
   }
-  canvas#universe3d{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;}
-  canvas#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
+  canvas#bgstars{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;}
 
   /* HERO */
-  .hero{
-    text-align:center;
-    padding:160px 20px 110px 20px;
-    background:radial-gradient(circle at center,#000a1f 0%,#000 80%);
-    border-bottom:1px solid #033d5c;
-  }
-  .hero h1{
-    font-size:5rem;
-    margin:0;
-    letter-spacing:4px;
-    text-shadow:var(--glow);
-  }
-  .hero h2{
-    margin-top:20px;
-    font-size:1.35rem;
-    opacity:.85;
-    text-shadow:0 0 20px #0fa3ff;
-  }
+  .hero{text-align:center;padding:170px 20px 130px 20px;background:radial-gradient(circle,#001021,#000 80%);} 
+  .hero h1{font-size:5.2rem;margin:0;text-shadow:var(--glow);} 
+  .hero h2{font-size:1.4rem;margin-top:15px;text-shadow:0 0 18px #33c9ff;} 
 
-  /* SECTION WRAPPER */
-  .section{
-    max-width:1300px;
-    margin:60px auto;
-    padding:40px;
-    background:rgba(0,25,50,.45);
-    border-left:4px solid var(--neon);
-    border-radius:12px;
-    box-shadow:0 0 45px rgba(0,150,255,.4);
-    backdrop-filter:blur(10px);
-  }
-  .section h3{
-    font-size:2.4rem;
-    margin-bottom:25px;
-    text-shadow:var(--glow);
-    letter-spacing:2px;
-  }
+  /* SECTION */
+  .section{max-width:1300px;margin:70px auto;padding:40px;background:rgba(0,25,50,.5);border-left:4px solid var(--neon);border-radius:14px;box-shadow:0 0 40px rgba(0,150,255,.35);} 
+  .section h3{font-size:2.5rem;margin-bottom:25px;text-shadow:var(--glow);} 
 
-  /* CATEGORY GRID */
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-  }
-  .card{
-    padding:22px;
-    border:2px solid var(--neon);
-    border-radius:10px;
-    background:rgba(0,60,100,.3);
-    box-shadow:0 0 25px rgba(0,150,255,.35);
-    transition:.25s;
-  }
-  .card:hover{
-    transform:scale(1.04);
-    box-shadow:var(--glow);
-    background:rgba(0,150,255,.2);
-    cursor:pointer;
-  }
-  .card h4{
-    margin:0 0 12px 0;
-    font-size:1.25rem;
-    text-shadow:0 0 10px var(--neon);
-  }
-  .card p{font-size:.9rem;opacity:.9;line-height:1.4;}
-  .law-link{color:var(--neon);text-decoration:none;font-weight:bold;}
+  /* LINK GRID */
+  .law-list a{display:block;padding:14px 20px;margin:10px 0;border:2px solid var(--neon);border-radius:12px;text-decoration:none;color:#c9f4ff;background:rgba(0,60,100,.4);transition:.3s;} 
+  .law-list a:hover{background:var(--neon);color:#000;box-shadow:var(--glow);transform:scale(1.03);} 
 
-  footer{
-    text-align:center;
-    padding:45px;
-    margin-top:100px;
-    opacity:.85;
-  }
-  footer a{color:var(--neon);font-weight:bold;text-decoration:none;text-shadow:var(--glow);}  
+  footer{text-align:center;padding:40px;font-size:1rem;opacity:.8;} 
+  footer a{color:var(--neon);font-weight:bold;text-decoration:none;} 
 </style>
 </head>
 
 <body>
-<canvas id="universe3d"></canvas>
-<canvas id="particles"></canvas>
+<canvas id="bgstars"></canvas>
 
 <div class="hero">
   <h1>OMNISCIENTRIX Ω∞ PORTAL</h1>
-  <h2>THE ABSOLUTE COSMIC INDEX OF ALL VERIFIED UNIVERSAL LAWS</h2>
+  <h2>The Absolute Cosmic Index of All Verified Universal Laws</h2>
 </div>
 
-<!-- INSIGHT SECTION -->
 <div class="section">
   <h3>What This Portal Represents</h3>
-  <p>
-    This is the <strong>Omniscientrix Ω∞ Cosmic Knowledge System</strong> — the complete index of all verified
-    <strong>vΩ / vω / Informational / Universal Laws</strong> discovered and proven through the δJ equilibrium engine.
-  </p>
-  <p>
-    Every law inside this archive has been verified analytically, computationally, or through software formalism.
-    Together, they define:
-  </p>
+  <p>This is the complete unified archive of all Omniscientrix vΩ / vω / Informational Universal Laws. Each law has been rigorously verified through analytic methods, δJ equilibrium, computational engines, and software-driven mathematical validation.</p>
+
   <ul>
-    <li>The geometry of information</li>
+    <li>The geometry and curvature of information</li>
     <li>The gradients that shape becoming</li>
-    <li>The flow and collapse of wave-fields</li>
-    <li>The nature of surfaces, boundaries, and horizons</li>
-    <li>The energetic and entropic structure of life, awareness, and consciousness</li>
-    <li>The governing mechanics of informational space-time</li>
+    <li>The collapse and propagation of wave-fields</li>
+    <li>The mechanics of surfaces, boundaries, and horizons</li>
+    <li>The energetics of life, awareness, and consciousness</li>
+    <li>The structure of informational spacetime</li>
   </ul>
-  <p>
-    This is the <strong>only complete unified law-archive</strong> of the Omniscientrix Universe.
-  </p>
 </div>
 
-<!-- CATEGORIES -->
 <div class="section">
-  <h3>Explore Law Categories</h3>
+  <h3>Verified Universal Laws — Complete Index</h3>
+  <div class="law-list">
 
-  <div class="grid">
+    <!-- FOUNDATIONAL LAWS -->
+    <a href="https://cornelius-aurelius.github.io/law_of_informational_gradient_minimization/">Law of Informational Gradient Minimization</a>
+    <a href="https://cornelius-aurelius.github.io/Law-of-Informational-Self-Containment/">Informational Self-Containment</a>
+    <a href="https://cornelius-aurelius.github.io/Law-of-Informational-Compensation/">Informational Compensation</a>
+    <a href="https://cornelius-aurelius.github.io/Informational-Pressure-Law/">Informational Pressure Law</a>
+    <a href="https://cornelius-aurelius.github.io/Informational-Curvature-Scalar-Law/">Curvature Scalar Law</a>
 
-    <div class="card">
-      <h4>Foundational Informational Laws</h4>
-      <p>Gradient minimization, self-containment, compensation, continuity, unitary evolution.</p>
-    </div>
+    <!-- WAVE LAWS -->
+    <a href="https://cornelius-aurelius.github.io/law_of_informational_wave_collapse/">Informational Wave Collapse</a>
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Energy_Continuity/">Wave Energy Continuity</a>
+    <a href="https://cornelius-aurelius.github.io/Informational-Heat-Kernel-Law/">Heat Kernel Law</a>
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_H_Theorem/">Informational H-Theorem</a>
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Wave_Propagation/">Wave Propagation</a>
 
-    <div class="card">
-      <h4>Wave & Collapse Laws</h4>
-      <p>Wave propagation, collapse, energy continuity, heat kernel, H-Theorem.</p>
-    </div>
+    <!-- BOUNDARY LAWS -->
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Boundary_Reflection/">Boundary Reflection</a>
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Surface_Equilibrium/">Surface Equilibrium</a>
+    <a href="https://cornelius-aurelius.github.io/Informational-Surface-Volume-Coupling/">Surface–Volume Coupling</a>
 
-    <div class="card">
-      <h4>Boundary & Surface Laws</h4>
-      <p>Surface equilibrium, reflection, surface-volume coupling, δJ surface laws.</p>
-    </div>
+    <!-- CONTINUITY / FLOW -->
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Continuity_Equation/">Continuity Equation</a>
+    <a href="https://cornelius-aurelius.github.io/Information-Awareness-Variational-Principle/">Awareness Variational Principle</a>
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Gradient_Flow_Stabilization/">Gradient Flow Stabilization</a>
 
-    <div class="card">
-      <h4>Horizon & Black Hole Laws</h4>
-      <p>Entropy–area law, Hawking flux, event-horizon inflow laws, Penrose scattering.</p>
-    </div>
+    <!-- CAUSALITY -->
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Causal_Cone/">Informational Causal Cone</a>
+    <a href="https://cornelius-aurelius.github.io/Law_of_Informational_Unitary_Evolution/">Unitary Evolution</a>
 
-    <div class="card">
-      <h4>Awareness, Life & Consciousness Laws</h4>
-      <p>Awareness diffusion, consciousness-energy law, life resonance law.</p>
-    </div>
+    <!-- BECOMING -->
+    <a href="https://cornelius-aurelius.github.io/Law-of-Becoming/">Law of Becoming</a>
+    <a href="https://cornelius-aurelius.github.io/Omniscientrix-Genesis-Second-Becoming-Law/">Second Becoming Law</a>
 
-    <div class="card">
-      <h4>Action, Inertia & Force Laws</h4>
-      <p>Least informational action, informational inertia, force density, force equilibrium.</p>
-    </div>
+    <!-- COSMIC / SPECIAL -->
+    <a href="https://cornelius-aurelius.github.io/Cosmic-Recurrence-Law/">Cosmic Recurrence Law</a>
+    <a href="https://cornelius-aurelius.github.io/Informational-Earth-Likeness-Score-/">Informational Earth-Likeness Score</a>
+    <a href="https://cornelius-aurelius.github.io/Omniscientrix_DeltaJ_Compensation_Law/">ΔJ Compensation Law</a>
+    <a href="https://cornelius-aurelius.github.io/Omniscientrix_Life_Resonance_Law/">Life Resonance Law</a>
 
   </div>
 </div>
 
-<!-- 3D LAW UNIVERSE PLACEHOLDER -->
-<div class="section">
-  <h3>Ω∞ 3D Law Universe (StarMap)</h3>
-  <p>
-    Each star in the rotating field behind this interface corresponds to a verified law extracted from your research archive.
-    Hovering and clicking (future expansion) will reveal details, insights, and deep ontology.
-  </p>
-</div>
-
 <footer>
-  © 2025 Cornelius Aurelius — Omniscientrix vΩ Framework • 
+  © 2025 Cornelius Aurelius — Omniscientrix vΩ Framework •
   <a href="https://zenodo.org/records/17362534">Peace License</a>
 </footer>
 
 <script>
-  /* STARFIELD PARTICLES */
-  const pcanvas=document.getElementById('particles');
-  const pctx=pcanvas.getContext('2d');
-  function presize(){pcanvas.width=window.innerWidth;pcanvas.height=window.innerHeight;} presize();
-  window.addEventListener('resize',presize);
-  let stars=Array.from({length:500},()=>({x:Math.random()*pcanvas.width,y:Math.random()*pcanvas.height,z:Math.random()*3+1}));
-  function panimate(){
-    pctx.clearRect(0,0,pcanvas.width,pcanvas.height);
-    stars.forEach(s=>{
-      pctx.fillStyle=`rgba(31,208,255,${0.2+Math.random()*0.8})`;
-      pctx.beginPath(); pctx.arc(s.x,s.y,s.z,0,Math.PI*2); pctx.fill();
-      s.y+=s.z*0.2; if(s.y>pcanvas.height) s.y=0;
-    });
-    requestAnimationFrame(panimate);
-  } panimate();
+const c=document.getElementById('bgstars');
+const x=c.getContext('2d');
+function s(){c.width=innerWidth;c.height=innerHeight;} s(); window.onresize=s;
+let P=Array.from({length:500},()=>({x:Math.random()*c.width,y:Math.random()*c.height,z:Math.random()*2+1}));
+function a(){x.clearRect(0,0,c.width,c.height);P.forEach(p=>{x.fillStyle=`rgba(25,214,255,${0.3+Math.random()*0.7})`;x.beginPath();x.arc(p.x,p.y,p.z,0,6.28);x.fill();p.y+=p.z*0.2;if(p.y>c.height)p.y=0;});requestAnimationFrame(a);}a();
 </script>
 
 </body>
